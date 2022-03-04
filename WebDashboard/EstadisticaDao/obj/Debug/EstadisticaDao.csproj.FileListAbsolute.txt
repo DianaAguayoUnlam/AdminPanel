@@ -1,0 +1,15 @@
+C:\Users\user\source\repos\WebDashboard\EstadisticaDao\bin\Debug\EstadisticaDao.dll.config
+C:\Users\user\source\repos\WebDashboard\EstadisticaDao\bin\Debug\EstadisticaDao.dll
+C:\Users\user\source\repos\WebDashboard\EstadisticaDao\bin\Debug\EstadisticaDao.pdb
+C:\Users\user\source\repos\WebDashboard\EstadisticaDao\bin\Debug\Entidades.dll
+C:\Users\user\source\repos\WebDashboard\EstadisticaDao\bin\Debug\EntityFramework.dll
+C:\Users\user\source\repos\WebDashboard\EstadisticaDao\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\user\source\repos\WebDashboard\EstadisticaDao\bin\Debug\Entidades.pdb
+C:\Users\user\source\repos\WebDashboard\EstadisticaDao\bin\Debug\Entidades.dll.config
+C:\Users\user\source\repos\WebDashboard\EstadisticaDao\bin\Debug\EntityFramework.xml
+C:\Users\user\source\repos\WebDashboard\EstadisticaDao\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\user\source\repos\WebDashboard\EstadisticaDao\obj\Debug\EstadisticaDao.csprojAssemblyReference.cache
+C:\Users\user\source\repos\WebDashboard\EstadisticaDao\obj\Debug\EstadisticaDao.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\WebDashboard\EstadisticaDao\obj\Debug\EstadisticaDao.csproj.CopyComplete
+C:\Users\user\source\repos\WebDashboard\EstadisticaDao\obj\Debug\EstadisticaDao.dll
+C:\Users\user\source\repos\WebDashboard\EstadisticaDao\obj\Debug\EstadisticaDao.pdb
