@@ -1,0 +1,44 @@
+﻿@model List<Entidades.Producto>
+<div class="card d-flex justify-content-center shadow-sm p-1">
+    <div class="card-header d-flex justify-content-between">
+        <h6 class="d-flex m-0 align-items-center">Productos por Categotía</h6>
+        <select class="form-select form-select-sm w-25" aria-label=".form-select-sm example" id="idCategory">
+            @foreach (var category in ViewBag.categorias)
+            {
+                <option value="@category.Id" @if (category.Id == ViewBag.idcategory) { <text> selected </text> }> @category.Nombre</option>
+            }
+
+        </select>
+        <button type="button" class=" btn btn btn-ligth py-0 px-2" onclick="actualizarProductoCategoria();">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"></path>
+                <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"></path>
+            </svg>
+        </button>
+    </div>
+    <div class="card-body" id="listProduct">
+        <table class="table table-success table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Precio</th>
+                    <th scope="col">Stock</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                @foreach (var product in Model)
+                {
+                    <tr>
+                        <th scope="row">@product.Id</th>
+                        <td>@product.Nombre</td>
+                        <td>@product.Precio</td>
+                        <td>@product.stock</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+

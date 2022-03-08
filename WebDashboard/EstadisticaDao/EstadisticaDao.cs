@@ -45,5 +45,30 @@ namespace Dao.EstadisticaDao
             }
             return listaVMCompras;
         }
+
+        public List<Producto> ObtenerProductosPorCategoria(int idCategory)
+        {
+            return contexto.Producto.Where(p => p.idCategoria == idCategory).ToList();
+        }
+
+        public dynamic ObtenerCategorias()
+        {
+            return contexto.Categoria.ToList();
+        }
+
+        public Marca ObtenerMarcaPorId(int idMarca)
+        {
+            return contexto.Marca.Where(m => m.Id == idMarca).First();
+        }
+
+        public List<Marca> ObtenerMarcas()
+        {
+            return contexto.Marca.ToList();
+        }
+
+        public List<Producto> ObtenerProductosPorMarca(int idMarca)
+        {
+            return contexto.Producto.Where(p => p.idMarca == idMarca).ToList();
+        }
     }
 }

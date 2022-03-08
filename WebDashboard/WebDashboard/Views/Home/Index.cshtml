@@ -1,6 +1,8 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
+<script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script>
 
 <div class="container-fluid">
     <div class="row justify-content-center">
@@ -8,7 +10,7 @@
             <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                 <h1 class="h2">Dashboard</h1>
             </div>
-            <div class="d-flex flex-wrap">
+            <div class="d-flex flex-wrap mb-5">
                 <div id="card-1" class="col-12 col-md-6 col-lg-4 resize p-2">
                     @Html.Action("ResizeCard", "Home")
                 </div>
@@ -21,23 +23,24 @@
                     @Html.Action("VentasPorAnio", "Home")
                 </div>
 
-                <div id="card-4" class="col-12 col-md-6 col-lg-4 resize p-2">
-                    @Html.Action("ResizeCard", "Home")
-                </div>
-
-                <div id="card-5" class="col-12 col-md-6 col-lg-4 resize p-2">
-                    @Html.Action("ImagenProducto", "Home")
+                <div id="card-4" class="col-12 col-md-6 col-lg-4 resize p-2 overflow-auto">
+                    @Html.Action("ProductosPorMarca", "Home")
                 </div>
 
                 <div id="card-6" class="col-12 col-md-6 col-lg-4 resize p-2">
-                    @Html.Action("VentasPorAnio", "Home")
-                </div>
-                <div id="card-7" class="col-12 col-md-6 col-lg-4 resize p-2">
-                    @Html.Action("ResizeCard", "Home")
+                    @Html.Action("ImagenPorMarca", "Home")
                 </div>
 
-                <div id="card-8" class="col-12 col-md-6 col-lg-4 resize p-2">
-                    @Html.Action("ImagenProducto", "Home")
+                <div id="card-5" class="col-12 col-md-6 col-lg-4 resize p-2 overflow-auto">
+                    @Html.Action("ProductosPorCategoria", "Home")
+                </div>
+
+                <div id="card-7" class="col-12 col-md-6 col-lg-4 resize p-2 overflow-auto">
+                    @Html.Action("ImagenMuestra", "Home", new { imgUrl = "https://via.placeholder.com/600/56a8c2" })
+                </div>
+
+                <div id="card-8" class="col-12 col-md-6 col-lg-4 resize p-2 overflow-auto">
+                    @Html.Action("ImagenMuestra", "Home", new { imgUrl = "https://via.placeholder.com/600/54176f" })
                 </div>
             </div>
         </main>

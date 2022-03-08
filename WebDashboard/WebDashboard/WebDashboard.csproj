@@ -210,6 +210,10 @@
     <Content Include="Views\Shared\_ResizeCard.cshtml" />
     <Content Include="Views\Shared\_ImgProducto.cshtml" />
     <Content Include="Views\Shared\_VentasPorAnio.cshtml" />
+    <Content Include="Views\Shared\_ProductosMarca.cshtml" />
+    <Content Include="Views\Shared\_ProductosCategoria.cshtml" />
+    <Content Include="Views\Shared\_ImagenPorMarca.cshtml" />
+    <Content Include="Views\Shared\_ImagenMuestra.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

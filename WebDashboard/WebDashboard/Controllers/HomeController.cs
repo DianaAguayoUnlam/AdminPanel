@@ -60,5 +60,58 @@ namespace WebDashboard.Controllers
             return PartialView("_VentasPorAnio", vmCompras);
         }
 
+        public PartialViewResult ProductosPorMarca()
+        {
+            List<Producto> productos = estadisticaServicio.ObtenerProductosPorMarca(1);
+            ViewBag.marcas = estadisticaServicio.ObtenerMarcas();
+            return PartialView("_ProductosMarca", productos);
+        }
+        
+
+        public ActionResult ActualizarProductosPorMarca(int idmarca)
+        {
+            List<Producto> productos = estadisticaServicio.ObtenerProductosPorMarca(idmarca);
+            ViewBag.marcas = estadisticaServicio.ObtenerMarcas();
+            ViewBag.idmarca = idmarca;
+            return PartialView("_ProductosMarca", productos);
+        }
+        
+        public PartialViewResult ProductosPorCategoria()
+        {
+            List<Producto> productos = estadisticaServicio.ObtenerProductosPorCategoria(1);
+            ViewBag.categorias = estadisticaServicio.ObtenerCategorias();
+            return PartialView("_ProductosCategoria", productos);
+        }
+
+
+        public ActionResult ActualizarProductosPorCategoria(int idCategory)
+        {
+            List<Producto> productos = estadisticaServicio.ObtenerProductosPorCategoria(idCategory);
+            ViewBag.categorias = estadisticaServicio.ObtenerCategorias();
+            ViewBag.idcategory = idCategory;
+            return PartialView("_ProductosCategoria", productos);
+        }
+        // CantidadPorMarca
+        public PartialViewResult ImagenPorMarca()
+        {
+            Marca marca = estadisticaServicio.ObtenerMarcaPorId(1);
+            ViewBag.marcas = estadisticaServicio.ObtenerMarcas();
+            return PartialView("_ImagenPorMarca", marca);
+        }
+
+        public PartialViewResult ActualizarImagenMarca(int idMarca)
+        {
+            Marca marca = estadisticaServicio.ObtenerMarcaPorId(idMarca);
+            ViewBag.marcas = estadisticaServicio.ObtenerMarcas();
+            return PartialView("_ImagenPorMarca", marca);
+        }
+        
+        public PartialViewResult ImagenMuestra(string imgUrl)
+        {
+            return PartialView("_ImagenMuestra", imgUrl);
+        }
+
+        
+
     }
 }

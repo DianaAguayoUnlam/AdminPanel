@@ -1,60 +1,3 @@
-/* globals Chart:false, feather:false */
-
-function dash(s) {
-    console.log(s);
-        'use strict'
-
-        feather.replace({ 'aria-hidden': 'true' })
-
-        // Graphs
-        var ctx = document.getElementById('myChart')
-        // eslint-disable-next-line no-unused-vars
-        var myChart = new Chart(ctx, {
-            type: 'line', // pie, bar
-            data: {
-                labels: [
-                    'Sunday',
-                    'Monday',
-                    'Tuesday',
-                    'Wednesday',
-                    'Thursday',
-                    'Friday',
-                    'Saturday'
-                ],
-                datasets: [{
-                    data: [
-                        15339,
-                        21345,
-                        10000,
-                        24003,
-                        23489,
-                        24092,
-                        12034
-                    ],
-                    lineTension: 0,
-                    backgroundColor: 'transparent',
-                    borderColor: '#007bff',
-                    borderWidth: 4,
-                    pointBackgroundColor: '#007bff'
-                }]
-            },
-            options: {
-                scales: {
-                    yAxes: [{
-                        ticks: {
-                            beginAtZero: false
-                        }
-                    }]
-                },
-                legend: {
-                    display: false
-                }
-            }
-        })
-    }
-
-
-
 function actualizar() {
     // Declaramos la url que vamos a usar para el Get
     const URL = "Home/ActualizarResizeCard"
@@ -89,6 +32,41 @@ function actualizarVentasPorAnio() {
     $.get(URL, (respuesta, estado) => {
         if (estado === "success") {
             $("#card-3").html(respuesta);
+        }
+    });
+}
+
+function actualizarProductoMarca() {
+    const URL = "Home/ActualizarProductosPorMarca"
+    let idmarca = $("#marca").val();
+    const info = { idMarca: idmarca };
+    $.get(URL, info, (respuesta, estado) => {
+        if (estado === "success") {
+            $("#card-4").html(respuesta);
+        }
+    });
+}
+
+function actualizarProductoCategoria() {
+    const URL = "Home/ActualizarProductosPorCategoria"
+    let idCategory = $("#idCategory").val();
+    const info = { idCategory: idCategory };
+    $.get(URL, info, (respuesta, estado) => {
+        if (estado === "success") {
+            $("#card-5").html(respuesta);
+        }
+    });
+}
+
+function actualizarImgMarca() {
+    const URL = "Home/ActualizarImagenMarca"
+    let idMarcaElement = $("#IdMarca");
+    let IdMarca = idMarcaElement.val();
+    const info = { IdMarca: IdMarca };
+    $.get(URL, info, (respuesta, estado) => {
+        if (estado === "success") {
+            $("#card-6").html(respuesta);
+            $("#IdMarca").val(IdMarca);
         }
     });
 }

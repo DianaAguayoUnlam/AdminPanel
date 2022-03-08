@@ -30,5 +30,30 @@ namespace Servicios.EstadisticaServicio
         {
             return estadisticaDao.ObtenerCantidadDeVentasPorAnio();
         }
+
+        public List<Producto> ObtenerProductosPorMarca(int idMarca)
+        {
+            return estadisticaDao.ObtenerProductosPorMarca(idMarca);
+        }
+
+        public List<Marca> ObtenerMarcas()
+        {
+            return estadisticaDao.ObtenerMarcas();
+        }
+
+        public List<Producto> ObtenerProductosPorCategoria(int idCategory)
+        {
+            return estadisticaDao.ObtenerProductosPorCategoria(idCategory);
+        }
+
+        public dynamic ObtenerCategorias()
+        {
+            return estadisticaDao.ObtenerCategorias();
+        }
+
+        public Marca ObtenerMarcaPorId(int idMarca)
+        {
+            return estadisticaDao.ObtenerMarcaPorId(idMarca);
+        }
     }
 }
